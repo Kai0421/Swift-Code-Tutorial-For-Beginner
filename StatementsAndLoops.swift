@@ -1,9 +1,13 @@
 //Statement And Loops
+
+
+//Variables Declared:
+// SYNTAX: var/let NAME_OF_VARIABLE : TYPE_OF_VARIABLE = VALUE
 var number : Int = 15
 var number2 : Int = 20
 var age : Int = 17
 
-//Simple If Statement 
+//Simples ifs Statements
 print("Title : If Statement (Numbers compare)")
 if (number < number2){
 	print("\t\(number) is less than \(number2)")
@@ -11,9 +15,25 @@ if (number < number2){
 	print("\t\(number) is less than \(number2)")
 }
 
+/*Here we can declare different types of boolean operations such as:
+
+	AND: &&
+	OR: ||
+	LESS THAN: <
+	MORE THAN: >
+	LESS OR EQUAL THAN: <=
+	MORE OR EQUAL THAN: >=
+*/
+
+if (number < number2 && number < 5){
+	print("\t\(number) is less than \(number2) and \(number) is less than 5")
+} else {
+	print("\t\(number) isn't less than \(number2) and/or \(number) is less than 5")
+}
+
 print("\nTitle : If Statement (Number compare with Constaint &&)")
 print("\n\tAge : \(age)")
-if (age > number) && (age < number2){
+if ((age > number) && (age < number2)){
 	print("\tAllow to Drive but not in collge")
 } else {
 	print("\tYou're either too old or too young.")
@@ -39,11 +59,11 @@ print("\tIs allow to Drive : \(Bool(age > number) ? true : false)")
 
 //Switch Statement String 
 print("\nTitle : Switch Statement with String")
-var ingrediant : String = "potatoes";
+var ingredient : String = "potatoes";
 
 //Fallthrough is use when there is potatoes wanted to be include as well. 
 //Swift doesn't need break within the switch statement. 
-switch ingrediant{
+switch ingredient{
 	case "potatoes", "mushrooms":
 		print("\tMake some soup with it.")
 		fallthrough
@@ -72,6 +92,7 @@ switch age {
 		print("\tWork for life")
 }
 
+
 //While Loops
 print("\nTitle : While Loops")
 var i : Int = 1
@@ -81,11 +102,20 @@ while(i < 5){
 	i++
 }
 
+i = 1
+
+//Repeat While Loops
+
+repeat {
+  	print("\ti value = \(i)")
+	i++
+} while i < 5
+
+/*For Loop:
+	NOTE: The For "C" Style loop will be deprecated in Swift 3.0
+*/
 print("\nTitle : Forloops ")
 for index in 1...5{
 	print("\tindex Value = \(index)")
 }
 	
-
-
-
